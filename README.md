@@ -12,3 +12,17 @@ Stack trace:
 ```
 
 You can run this cmake project inside our docker container for testing: guitar24t/ck-ros2 which has the wpilib 2025.1.1 library installed
+```
+docker run -it --rm guitar24t/ck-ros2:latest /bin/bash
+```
+
+Now inside docker, run:
+```
+git clone https://github.com/guitar24t/replicate_segfault_smallset_test.git
+cd replicate_segfault_smallset_test
+mkdir build
+cd build
+cmake ..
+make
+./testlib
+```

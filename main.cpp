@@ -4,6 +4,8 @@
 #include <iostream>
 #include <pathplanner/lib/events/EventScheduler.h>
 
+//Lightly replicate the conditions of the FollowPathCommand causing SIGSEGV from 
+//https://github.com/mjansen4857/pathplanner/blob/main/pathplannerlib/src/main/native/cpp/pathplanner/lib/commands/FollowPathCommand.cpp#L30
 class FollowPathCommand: public frc2::CommandHelper<frc2::Command, FollowPathCommand> {
 public:
     static inline wpi::SmallSet<frc2::Subsystem*, 4>  retThis()
