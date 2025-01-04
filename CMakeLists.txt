@@ -20,9 +20,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
   /usr/local/include/wpilibNewCommands
 )
 
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
-set(CMAKE_CXX_FLAGS_RELEASE "-O0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0") 
 
 target_link_libraries(${PROJECT_NAME} wpimath wpiutil wpilibc wpilibNewCommands /usr/local/lib/libpathplannerlib.a)
 target_compile_features(${PROJECT_NAME} PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
